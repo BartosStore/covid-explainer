@@ -2,6 +2,7 @@ import React from 'react';
 
 import Overview from './component/Overview';
 import './App.css';
+import DailyIncrement from './daily_increment.png';
 
 function App() {
   return (
@@ -28,12 +29,10 @@ function App() {
             <div className="col-12">
               <div className="card">
                 <div className="card-header">
-                  Header
+                  <p>Denní přírůstek s odhadem vývoje podle R</p>
                 </div>
                 <div className="card-body">
-                  <div className="card-title">Title</div>
-                  <div className="card-subtitle">Subtitle</div>
-                  <div className="card-text">text</div>
+                  <img src={DailyIncrement} className="responsive" />
                 </div>
               </div>
             </div>

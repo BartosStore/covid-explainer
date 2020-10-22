@@ -1,11 +1,26 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
+import axios from 'axios';
 
 export default function Overview() {
-  const [testedTotal, setTestedTotal] = useState(1885488);
-  const [activeCasesTotal, setActiveCasesTotal] = useState(205000);
-  const [activeCases, setActiveCases] = useState(120000);
-  const [recoveredCases, setRecoveredCases] = useState(85000);
-  const [positiveLastDay, setPositiveLastDay] = useState(14789);
+  const [testedTotal, setTestedTotal] = useState(0);
+  const [activeCasesTotal, setActiveCasesTotal] = useState(0);
+  const [activeCases, setActiveCases] = useState(0);
+  const [recoveredCases, setRecoveredCases] = useState(0);
+  const [positiveLastDay, setPositiveLastDay] = useState(0);
+
+  useEffect(() => {
+    async function fetchCovidData() {
+      const response = await axios('https://onemocneni-aktualne.mzcr.cz/api/v2/covid-19/zakladni-prehled.json');
+      const overview = response.data.data[0];
+      setTestedTotal(overview.provedene_testy_celkem);
+      setActiveCasesTotal(overview.potvrzene_pripady_celkem);
+      setActiveCases(overview.aktivni_pripady);
+      setRecoveredCases(overview.vyleceni);
+      setPositiveLastDay(overview.potvrzene_pripady_vcerejsi_den);
+    }
+
+    fetchCovidData()
+  }, []);
 
   return (
     <div>

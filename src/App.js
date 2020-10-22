@@ -1,4 +1,6 @@
 import React from 'react';
+
+import Overview from './component/Overview';
 import './App.css';
 
 function App() {
@@ -20,35 +22,7 @@ function App() {
             <p>Tento web byl sestaven za účelem servírování dat o Covidu bez emocí, bez zkreslení a s výhledem do budoucna na základě reprodukčního čísla.</p>
           </div>
 
-          <div className="row">
-            <div className="col-5">
-              <div className="card">
-                <div className="card-header">
-                  Header
-                </div>
-                <div className="card-body">
-                  <div className="card-title">Title</div>
-                  <div className="card-subtitle">Subtitle</div>
-                  <div className="card-text">text</div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div className="row">
-            <div className="col-12">
-              <div className="card">
-                <div className="card-header">
-                  Header
-                </div>
-                <div className="card-body">
-                  <div className="card-title">Title</div>
-                  <div className="card-subtitle">Subtitle</div>
-                  <div className="card-text">text</div>
-                </div>
-              </div>
-            </div>
-          </div>
+          <Overview />
 
           <div className="row">
             <div className="col-12">

@@ -32,7 +32,7 @@ function App() {
                   <p>Denní přírůstek s odhadem vývoje podle R</p>
                 </div>
                 <div className="card-body">
-                  <img src={DailyIncrement} className="responsive" />
+                  <img src={DailyIncrement} className="responsive" alt="Daily increment" />
                 </div>
               </div>
             </div>

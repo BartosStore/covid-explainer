@@ -1,6 +1,7 @@
 import React from 'react';
 
 import Overview from './component/Overview';
+import Explanation from './component/Explanation';
 import './App.css';
 import DailyIncrement from './daily_increment.png';
 
@@ -24,6 +25,12 @@ function App() {
           </div>
 
           <Overview />
+          <Explanation />
+
+          <div class="panel panel-default">
+            <div class="panel-heading">Panel Heading</div>
+            <div class="panel-body">Panel Content</div>
+          </div>
 
           <div className="row">
             <div className="col-12">
@@ -36,6 +43,15 @@ function App() {
                 </div>
               </div>
             </div>
+          </div>
+        </div>
+
+
+        <div class="container">
+          <h2>Panel Heading</h2>
+          <div class="panel panel-default">
+            <div class="panel-heading">Panel Heading</div>
+            <div class="panel-body">Panel Content</div>
           </div>
         </div>
       </main>
